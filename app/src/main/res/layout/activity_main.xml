@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/linear_layoutTop">
+           <Button
+               android:layout_margin="10dp"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="Horizontal"
+               android:id="@+id/horizontal"
+               />
+           <Button
+               android:layout_margin="10dp"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="Vertical"
+               android:id="@+id/vertical"
+               />
+       </LinearLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/list"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_marginHorizontal="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginBottom="0dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/linear_layoutTop" />
+
+
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/fab"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintHorizontal_bias="0.9"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="end|bottom"
+           android:src="@drawable/ic_baseline_edit_24"
+           android:contentDescription="ADD"
+           android:layout_margin="16dp" />
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
